@@ -6,7 +6,7 @@ import subprocess, os
 # 
 # usage:
 # 1. Make the device to be sdb connectable with your PC.
-# 2. Run the script (./time-synchronize.py, if you made the file executable).
+# 2. Run the script (./time-synchronize.py, if you give it execute permission using chmod +x).
 
 # Get root
 os.system('sdb root on')
