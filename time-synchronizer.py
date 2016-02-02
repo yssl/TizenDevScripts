@@ -5,8 +5,15 @@ import subprocess, os
 # - Set Tizen device's system time to your PC's one.
 # 
 # usage:
-# 1. Make the device to be sdb connectable with your PC.
-# 2. Run the script (./time-synchronize.py, if you give it execute permission using chmod +x).
+# 1. Make the device sdb connectable with your PC.
+# 2. Run the script.
+#
+# tips:
+# - Give the script file execute permission using chmod +x,
+#   then you can just run it by ./time-synchronize.py.
+# - It would be more convinent if you add the directory having
+#   this script to PATH environment variable.
+#   ex) export PATH=$PATH:'/home/yourhome/your-script-dir'
 
 # Get root
 os.system('sdb root on')
