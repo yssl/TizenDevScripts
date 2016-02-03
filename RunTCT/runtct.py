@@ -2,8 +2,8 @@
 import os, datetime, time, sys
 import multiprocessing as mp
 
-# runtct-main.py v0.1
-# usage: python runtct-main.py [utc/ict] [package name] [tc start index] [tc end index]
+# runtct.py v0.1
+# usage: ./runtct.py [utc/ict] [package name] [tc start index] [tc end index]
 #        [tc start index] and [tc end index] are optional.
 #
 # Before running the script, change tctRootPath to your local tct directory
