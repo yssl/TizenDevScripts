@@ -64,7 +64,12 @@ import os, time, subprocess, datetime
 # 7. Log files are generated in ./output. After all trial finished, run summarizer.py to get summarized result.
 #
 # How it works:
-#
+# 1. Push time-logger-device.sh to device.
+# 2. Run the specified command via time-logger-device.sh on the device. (to record command invoking time)
+# 3. All printed out logs are saved to temp file on the device and then pulled to host PC.
+# 4. Look through the log file and append time-logger logs only again to the end of the log file.
+# 5. Repeat step 2 ~ 4 for given repitition count.
+# 5. summarizer.py reads all host PC log files and calculates & prints avg, max, min of each time item.
 
 #########################################
 # Setting variables
