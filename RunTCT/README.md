@@ -1,5 +1,5 @@
-RunTCT
-- A lightweight TCT client
+# RunTCT
+A lightweight TCT client.
 
 runtct.py
 : RunTCT script file. You can find usage in the comment of the file. run.sh shows you some example usages.
