@@ -15,4 +15,4 @@ for subdir in os.listdir(cwd):
             #print 'cd %s;git %s'%(subdir, argstr)
             print
             print '## %s'%subdir
-            os.system('cd %s;git %s'%(subdir, argstr))
+            os.system('cd %s && git %s'%(subdir, argstr))
