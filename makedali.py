@@ -2,8 +2,18 @@
 import os,sys, time, glob
 '''
 usage: 
-makedali.py install_all2run_release dali-core/
 makedali.py configure_release dali-core/
+makedali.py install dali-core/
+makedali.py configure_release dali-adaptor/
+makedali.py install dali-adaptor/
+makedali.py configure_release dali-adaptor/
+makedali.py install dali-adaptor/
+makedali.py configure_release dali-demo/
+makedali.py install dali-demo/
+
+or
+
+makedali.py install_all_release
 '''
 
 maketarget = sys.argv[1]
@@ -23,9 +33,9 @@ preconf_debug['dali-toolkit'] = "CXXFLAGS='-g -O0 --coverage' LDFLAGS='--coverag
 confopts_debug = {}
 confopts_debug['dali'] = "--prefix=$DESKTOP_PREFIX --enable-debug"
 confopts_debug['dali-core'] = "--prefix=$DESKTOP_PREFIX --enable-debug"
-#confopts_debug['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-debug"
+confopts_debug['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-debug"
 #confopts_debug['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-debug --with-node-js=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
-confopts_debug['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-debug --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
+# confopts_debug['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-debug --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
 confopts_debug['dali-toolkit'] = "--prefix=$DESKTOP_PREFIX --enable-debug"
 confopts_debug['dali-demo'] = "-DCMAKE_INSTALL_PREFIX=$DESKTOP_PREFIX -DCMAKE_BUILD_TYPE=Debug"
 
@@ -33,9 +43,9 @@ preconf_release = {}
 confopts_release = {}
 confopts_release['dali'] = '--prefix=$DESKTOP_PREFIX'
 confopts_release['dali-core'] = '--prefix=$DESKTOP_PREFIX'
-#confopts_release['dali-adaptor'] = '--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20'
+confopts_release['dali-adaptor'] = '--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20'
 #confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --with-node-js=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
-confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
+# confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
 #confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-feedback --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
 confopts_release['dali-toolkit'] = '--prefix=$DESKTOP_PREFIX'
 confopts_release['dali-demo'] = '-DCMAKE_INSTALL_PREFIX=$DESKTOP_PREFIX -DCMAKE_BUILD_TYPE=Release'
