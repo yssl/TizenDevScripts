@@ -1,5 +1,10 @@
 #!/usr/bin/env python
 import os,sys, time, glob
+'''
+usage: 
+makedali.py install_all2run_release dali-core/
+makedali.py configure_release dali-core/
+'''
 
 maketarget = sys.argv[1]
 
