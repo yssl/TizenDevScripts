@@ -13,6 +13,7 @@ makedali.py install dali-demo/
 
 or
 
+makedali.py configure_all_release
 makedali.py install_all_release
 '''
 
@@ -47,6 +48,7 @@ confopts_release['dali-adaptor'] = '--prefix=$DESKTOP_PREFIX --enable-profile=UB
 #confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --with-node-js=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
 # confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
 #confopts_release['dali-adaptor'] = "--prefix=$DESKTOP_PREFIX --enable-profile=UBUNTU --enable-gles=20 --enable-feedback --with-libuv=/media/Work/Code/NonTizenProjs/node-v0.12.4/deps/uv/include"
+# confopts_release['dali-toolkit'] = '--prefix=$DESKTOP_PREFIX'
 confopts_release['dali-toolkit'] = '--prefix=$DESKTOP_PREFIX'
 confopts_release['dali-demo'] = '-DCMAKE_INSTALL_PREFIX=$DESKTOP_PREFIX -DCMAKE_BUILD_TYPE=Release'
 
